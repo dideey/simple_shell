@@ -34,7 +34,7 @@ char **list_to_strings(list_t *head)
 
 	strs = malloc(sizeof(char *) * (size + 1));
 	if (!strs)
-		return (NULL);
+		return (NULL); /*if not strs null*/
 
 	for (i = 0; i < size; i++)
 	{
