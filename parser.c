@@ -17,7 +17,7 @@ int is_cmd(info_t *info, char *path)
 
 	(void)info;
 	if (!path || stat(path, &st))
-		return (0);
+		return (0); /*return value*/
 
 	if (st.st_mode & S_IFREG)
 	{
