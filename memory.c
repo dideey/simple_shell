@@ -7,7 +7,7 @@
 int bfree(void **ptr)
 {
 	if (!ptr)
-		return (0);
+		return (0); /*value*/
 
 	if (*ptr)
 	{
