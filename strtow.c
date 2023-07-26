@@ -3,7 +3,7 @@
  * **strtow - the exact implimentation of strtow
  * @str: parameter 1
  * @d: parameter 2
- * Return: s a pointer to a pointer. 
+ * Return: s a pointer to a pointer.
  */
 char **strtow(char *str, char *d)
 {
@@ -19,7 +19,7 @@ char **strtow(char *str, char *d)
 			numwords++;
 	if (numwords == 0)
 		return (NULL);
-	s = malloc((1 + numwords) *sizeof(char *));
+	s = malloc((1 + numwords) * sizeof(char *));
 	if (!s)
 		return (NULL);
 	for (i = 0, j = 0; j < numwords; j++)
@@ -64,7 +64,7 @@ char **strtow2(char *str, char d)
 			numwords++;
 	if (numwords == 0)
 		return (NULL);
-	s = malloc((1 + numwords) *sizeof(char *));
+	s = malloc((1 + numwords) * sizeof(char *));
 	if (!s)
 		return (NULL);
 	for (i = 0, j = 0; j < numwords; j++)
