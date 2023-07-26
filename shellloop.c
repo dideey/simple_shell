@@ -21,7 +21,7 @@ int hsh(info_t *info, char **av)
 		{
 			set_info(info, av);
 			builtin_ret = find_builtin(info);
-			if (builtin_ret == -1)
+			if (builtin_ret == -1)/*builtin_ret*/
 				find_cmd(info);
 		}
 		else if (interactive(info))
