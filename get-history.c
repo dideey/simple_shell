@@ -71,6 +71,7 @@ int write_history(info_t *info)
  * @info: usual input
  * Return: false
  */
+
 int read_history(info_t *info)
 {
 	int index = 0, last = 0, line_count = 0;
@@ -78,49 +79,49 @@ int read_history(info_t *info)
 	struct stat file_stat;
 	char *buffer = NULL, *filename = get_history_file(info);
 
-	if (!filename, file_descriptor == -1)
-		file_descriptor = open(filename, O_RDONLY);
+	if (!filename)
+		return (0);
+	file_descriptor = open(filename, O_RDONLY);
 	free(filename);
-	return (0);
+	if (file_descriptor == -1)
+		return (0);
 	if (!fstat(file_descriptor, &file_stat))
 		file_size = file_stat.st_size;
+	if (file_size < 2)
+		return (0);
 	buffer = malloc(sizeof(char) * (file_size + 1));
-	if (file_size < 2, !buffer)
+	if (!buffer)
 		return (0);
 	read_length = read(file_descriptor, buffer, file_size);
 	buffer[file_size] = '\0';
 	if (read_length <= 0)
-	{ free(buffer);
+	{
+		free(buffer);
 		close(file_descriptor);
 		return (0); }
 	close(file_descriptor);
 	index = 0;
-	while (index < file_size)
+	for (; index < file_size; index++)
 	{
-		switch (buffer[index])
-		{ case '\n':
+		if (buffer[index] == '\n')
+		{
 			buffer[index] = '\0';
 			build_history_list(info, buffer + last, line_count++);
-			last = index + 1;
-			break;
-			default:
-			break; }
-		index++; }
-	if (last != index)
-		build_history_list(info, buffer + last, line_count++);
-	free(buffer);
-	info->histcount = line_count;
-	do { delete_node_at_index(&(info->history), 0);
+			last = index + 1; }
+	}
+	do {
+		delete_node_at_index(&(info->history), 0);
 	} while (--info->histcount >= HIST_MAX);
 	renumber_history(info);
-	return (info->histcount); }
-	/**
-	 * build_history_list - description
-	 * @info: input init
-	 * @buf: buffer
-	 * @linecount: parameter 3
-	 * Return: Always
-	 */
+	return (info->histcount);
+}
+/**
+ * build_history_list - description
+ * @info: input init
+ * @buf: buffer
+ * @linecount: parameter 3
+ * Return: Always
+ **/
 
 int build_history_list(info_t *info, char *buf, int linecount)
 {
