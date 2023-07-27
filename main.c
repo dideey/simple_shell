@@ -30,7 +30,7 @@ _eputchar('\n');
 _eputchar(BUF_FLUSH);
 exit(127);
 }
-return (EXIT_FAILURE);
+return (EXIT_FAILURE); /*exit*/
 }
 info->readfd = fd;
 }
