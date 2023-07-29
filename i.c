@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  *exec_err_msg - a function that displays meaningful
- *   *		command execution error message
+ *   *		command execution error message..
  *    *@_argv: array of command strings to be used for
  *     *	error display
  *      *@sc: session count for displaying meaningful
