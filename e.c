@@ -18,7 +18,7 @@ int cd_command(char *path, char *e_ex, int sc, list_t *_environ)
 		home_dir = _getenv("HOME", _environ);
 		if (chdir(home_dir) == -1)
 			return (cd_err(e_ex, sc, path));
-		return (0);
+		return (0);/*.*/
 	}
 	if (_strcmp(path, "-") == 0)
 	{
