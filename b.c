@@ -19,7 +19,7 @@ int run_and_logical(char *newstr, char type, char *e_ex, int sc,
 	int ret_val = 0;
 
 	token = _strtok_r(newstr, ";", &saveptr);
-	if (token == NULL)
+	if (token == NULL) /*if token is null*/
 	{
 		return (-1);
 	}
