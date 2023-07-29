@@ -13,7 +13,7 @@ int to_argv(char *input, char *e_ex, int sc, list_t *_environ)
 	char *token, **_argv = NULL, *copy = _strdup(input);
 	int i = 0, ret_val;
 
-	if (copy == NULL)
+	if (copy == NULL) /*copy equal null return -1*/
 		return (-1);
 	token = _strtok(copy, " \t");
 	if (token == NULL)
