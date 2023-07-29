@@ -4,7 +4,7 @@
  *   *		new environmental varibale by the user
  *    *@env: name of the new environmental variable to
  *     *	be set
- *      *@value: value of the variable to be set
+ *      *@value: value of the variable to be set..
  *       *@_environ: custom environmental varibales for
  *        *		the program which is to be edited
  *         *Return: returns zero on success and nonzero on error
