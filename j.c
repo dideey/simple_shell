@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  *and_or_input_err - a function that displays proper error
- *   *			message when a user exits the input
+ *   *			message when a user exits the input..
  *    *			request caused as a result of command
  *     *			ending with "&&" or "||" improperly
  *      *@e_ex: program executable for proper error display
