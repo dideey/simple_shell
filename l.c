@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  *exit_func - a function that handles the "exit"
- *   *		commands from the user
+ *   *		commands from the user..
  *    *@_argv: array of inputs from the user
  *     *@e_ex: executable for the program error handling
  *      *@sc: session count for error handling
