@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  *create_node - a function that creates a node for
- *   *		storing an environmental variable
+ *   *		storing an environmental variable..
  *    *@data: daat to be stored in the node
  *     *Return: returns a pointer to the new node on
  *      *	success and NULL on error
