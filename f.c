@@ -15,7 +15,7 @@ int comment(char *input, char *e_ex, int sc, list_t *_environ)
 	if (input[0] == '#')
 	{
 		input[0] = '\0';
-		return (0);
+		return (0); /*.*/
 	}
 	for (i = 0; input[i]; i++)
 	{
