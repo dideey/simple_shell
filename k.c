@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  *_execute - function that handles thet execution of
- *   *		all user commands
+ *   *		all user commands..
  *    *@path: pathfor the commands executables
  *     *@_argv: array of commands entered by the user
  *      *@e_ex: executable of the program for proper error display
