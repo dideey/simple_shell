@@ -20,7 +20,7 @@ int and_or_user_input(char *input, char *e_ex, int sc, list_t *_environ)
 		_print_str(">");
 		fflush(stdout);
 		input_count = getline(&cat_str, &n, stdin);
-		if (input_count != -1)
+		if (input_count != -1) /*not equal to -1*/
 		{
 			if (_strcmp(cat_str, "\n") == 0)
 				continue;
