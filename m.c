@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *  *free_array - a functiono that frees an array
- *   *		of strings
+ *   *		of strings..
  *    *@arr: array to be freed
  *     *
  **/
